@@ -1,17 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Navbar from './components/Navbar'
+import Todo from './components/Todo'
 
-    class App extends Component {
+export class App extends Component {
+  state = {
+    todos : []
+  }
 
-      state = {
-        contacts: []
-      }
-      componentDidMount() {
-        fetch('http://localhost:8000/apis/v1?format=json')
-        .then(res => res.json())
-        .then((data) => {
-          this.setState({ contacts: data })
-        })
-        .catch(console.log)
-      }      
+  componentDidMount() {
+    fetch('http://localhost:8000/apis/v1?format=json')
+    .then(res => res.json())
+    .then((data) => {
+      this.setState({todos:data})
+    })
+    .catch(console.log)
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar/>
+        <Todo todos={this.state.todos} />
+      </div>
+    )
+  }
 }
-export default App;
+
+export default App
