@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'todos.apps.TodosConfig',  #<<<<<<<
     'apis.apps.ApisConfig',  #<<<<
     'rest_framework',  #<<<<<<
-    'frontend.apps.FrontendConfig', #<<<<
+    'corsheaders', #<<<<<<<<<
 ]
 
 REST_FRAMEWORK = {
@@ -36,6 +36,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'todo_project.urls'
@@ -99,3 +101,4 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+CORS_ORIGIN_ALLOW_ALL = True
