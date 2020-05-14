@@ -3,17 +3,17 @@ import React from 'react'
 const Todo = ({ todos }) => {
   return (
     <div>
-      <center><h1>Todo Application</h1></center>
+      <div className="container text-primary p-5 m-2">
       {todos.map((todo) => (
-        <div class="card">
+          <div class="card w-75 m-1 p-2">
           <div class="card-body">
-            <h5 class="card-title">{todo.id}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{todo.title}</h6>
+            <h5 class="card-title">{todo.title}</h5>
             <p class="card-text">{todo.description}</p>
-            
+            <a href="https://github.com/codePerfectPlus/ToDoApp" class="btn btn-primary">Check Project</a>
           </div>
-        </div>
-      ))}
+        </div> 
+        ))}
+    </div>
     </div>
   )
 };

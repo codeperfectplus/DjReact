@@ -5,7 +5,7 @@ export class Navbar extends Component {
         return (
             <div>
                 <nav class="navbar navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="https://github.com/codePerfectPlus/ToDoApp">
                         Todo Application With Django And React.
                         </a>
                     <span class="navbar-text">
