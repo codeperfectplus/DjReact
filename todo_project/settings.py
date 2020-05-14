@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     'todos.apps.TodosConfig',  #<<<<<<<
     'apis.apps.ApisConfig',  #<<<<
     'rest_framework',  #<<<<<<
+    'frontend.apps.FrontendConfig', #<<<<
 ]
 
 REST_FRAMEWORK = {
